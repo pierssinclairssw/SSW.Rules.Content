@@ -1,29 +1,28 @@
 ---
 type: rule
-archivedreason: 
 title: Spec - Do you conduct a Specification Review? (ask for a coffee not a marriage)
-guid: fa87520c-c384-4372-855d-984c7600e5f9
 uri: spec-do-you-conduct-a-specification-review-ask-for-a-coffee-not-a-marriage
-created: 2009-03-03T05:04:02.0000000Z
 authors:
-- title: Adam Cogan
-  url: https://ssw.com.au/people/adam-cogan
-- title: Ulysses Maclaren
-  url: https://ssw.com.au/people/ulysses-maclaren
-- title: Cameron Shaw
-  url: https://ssw.com.au/people/cameron-shaw
-- title: Eric Phan
-  url: https://ssw.com.au/people/eric-phan
-- title: Edgar Rocha
-  url: https://ssw.com.au/people/edgar-rocha
+  - title: Adam Cogan
+    url: https://ssw.com.au/people/adam-cogan
+  - title: Ulysses Maclaren
+    url: https://ssw.com.au/people/ulysses-maclaren
+  - title: Cameron Shaw
+    url: https://ssw.com.au/people/cameron-shaw
+  - title: Eric Phan
+    url: https://ssw.com.au/people/eric-phan
+  - title: Edgar Rocha
+    url: https://ssw.com.au/people/edgar-rocha
 related: []
 redirects:
-- spec-do-you-conduct-a-specification-review-(ask-for-a-coffee-not-a-marriage)
-
+  - spec-do-you-conduct-a-specification-review-(ask-for-a-coffee-not-a-marriage)
+created: 2009-03-03T05:04:02.000Z
+archivedreason: null
+guid: fa87520c-c384-4372-855d-984c7600e5f9
 ---
 
 A client will often ask for a proposal or ballpark for the project. It is very difficult to give them the price for a large project without first conducting a specification review. 
-
+assda
 The Spec Review is a process that will demonstrate to the client whether you have the commercial sense to understand their \*business\* and have the technical and management capacity to complete the project.
 
 It is paid work conducted after the initial meeting to determine the overall scope, feasibility, and ballpark costs of the project (i.e. $50k or $500k).  E.g. Mr. Northwind learns that the idea he presented at the initial meeting will cost approximately $80K and he has to determine if that is feasible to his business or if he will trim the functionality to better manage the cost.
