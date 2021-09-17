@@ -10,7 +10,8 @@ related: []
 redirects: []
 created: 2015-10-27T15:19:19.000Z
 archivedreason: There are dozens of different ways to view insights in app
-  insights and it is constantly changing so this feels like a low value rule
+  insights and it is constantly changing so this feels like a low value rule as
+  we would need to list out all the methods and update them very frequently
 guid: 5c6458c0-4227-406a-ba7d-27717272057c
 ---
 
