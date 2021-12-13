@@ -1,34 +1,32 @@
 ---
 type: rule
-archivedreason: 
 title: Schema - Do you have standard tables and columns?
-guid: 0a8b7eec-9b71-478b-b90e-6af7ac64df27
 uri: have-standard-tables-and-columns
-created: 2019-11-05T22:52:15.0000000Z
 authors:
-- title: Adam Cogan
-  url: https://ssw.com.au/people/adam-cogan
+  - title: Adam Cogan
+    url: https://ssw.com.au/people/adam-cogan
 related: []
 redirects:
-- schema-do-you-have-standard-tables-and-columns
-
+  - schema-do-you-have-standard-tables-and-columns
+created: 2019-11-05T22:52:15.000Z
+archivedreason: null
+guid: 0a8b7eec-9b71-478b-b90e-6af7ac64df27
 ---
-
 Follow the below standards for tables and columns.
 
 1. All tables should have the following fields:
 
-| **Field**  |  **SQL Server Field Properties**  |
-| --- | --- |
-| CreatedUtc | datetime2 Allow Nulls=False Default=GETUTCDATE() |
-| CreatedUserId | Foreign Key to Users table, Allow Nulls=False |
-| ModifiedUtc | datetime2 Allow Nulls=False Default=GETUTCDATE() |
-| ModifiedUserId | Foreign Key to Users table, Allow Nulls=False |
-| Concurrency | rowversion Allow Nulls=False|
+| **Field**      | **SQL Server Field Properties**                  | **Notes** |
+| -------------- | ------------------------------------------------ | ------ |
+| CreatedUtc     | datetime2 Allow Nulls=False Default=GETUTCDATE() | #1, #2
+| CreatedUserId  | Foreign Key to Users table, Allow Nulls=False    | #2
+| ModifiedUtc    | datetime2 Allow Nulls=False Default=GETUTCDATE() | #2
+| ModifiedUserId | Foreign Key to Users table, Allow Nulls=False    | #2
+| Concurrency    | rowversion Allow Nulls=False                     | #2, #5
 
 <!--endintro-->
 
-![Figure: The first three are examples of bad table records. The last one is an example of how this table structure should be entered](imgGoodBadPracticesExampleSQLFields.png)  
+![Figure: The first three are examples of bad table records. The last one is an example of how this table structure should be entered](imgGoodBadPracticesExampleSQLFields.png)
 
 **Note #1:** Never set the CreatedUtc field - instead use a default GETUTCDATE()
 
@@ -41,7 +39,6 @@ If the settings are not application-wide, but just for that user then an XML (do
 .NET programs have an Application.Configuration which exports to XML file (app.config) automatically. It works very well, and deployment is very simple. It's integrated right into the Visual Studio.NET designer as well.
 
 3. All databases should have a version table to record structural changes to tables. See [SSW Rules to Better Code](/rules-to-better-code)
- 
 4. Lookup tables that have just two columns should be consistent and follow this convention: CategoryId (int) and CategoryName (varchar(100)).
 
 The benefit is that a generic lookup form can be used. You will just need the generic lookup form pass in the TableName and Column1 and Column2.
@@ -49,3 +46,5 @@ The benefit is that a generic lookup form can be used. You will just need the ge
 **Note #3:** The problem with the naming is the primary keys don't match.
 
 **Note #4:** The benefit with the character primary key columns is that queries and query strings have meaning Eg. ssw.com.au/ssw/Download/Download.aspx?GroupCategoryID=5BUS from this URL I can guess that it is in the business category.
+
+**Note #5:** Concurrency helps prevent loss of integrity when many users update rows at the same time. It also helps to identify when a row has been updated since it was last read. Use rowversion instead of the timestamp data type because it has been deprecated. See the [Microsoft documentation on row version](https://docs.microsoft.com/en-us/sql/t-sql/data-types/rowversion-transact-sql?view=sql-server-ver15)
