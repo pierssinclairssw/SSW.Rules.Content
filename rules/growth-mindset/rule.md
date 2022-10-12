@@ -20,4 +20,6 @@ Many people have things they feel good at, and they usually perform well in thos
 
 While you might be bad at those things right now, you can almost always improve to some degree, and usually by a fairly large margin. It's true that there might be limits to how much you can improve, but getting stuck in the mindset of **thinking you can't improve** is not very helpful. In the end, those thoughts will lead to a feedback loop where you never will improve.
 
+Once you figure out you can get
+
 <!--endintro-->
