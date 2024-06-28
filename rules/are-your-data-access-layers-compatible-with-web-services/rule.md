@@ -14,7 +14,7 @@ Many applications are designed for use with a database connection only. As users
 
 <!--endintro-->
 ::: good
-![Figure: Good example - Options form showing choice of connection](timepronetoptionsconnection.jpg)
+![Figure: Good example - Options form showing choice of connection](timepronetoptionsconnection_1719541897655.jpg)
 :::
 
 There are 3 ways to implement this:
